@@ -1,6 +1,7 @@
 import express, { json } from "express";
 import { db } from "./initDb.js";
 import cors from 'cors'
+import bcrypt from 'bcrypt'
 const app = express();
 const port = 5001;
 
