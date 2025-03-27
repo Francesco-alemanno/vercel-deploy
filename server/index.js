@@ -1,29 +1,19 @@
-import express, { json } from 'express'
+import express, { json } from "express";
 
-import { db } from './initDb.js';
+import { getAllUsers, login, registrazione } from "./controllers.js";
 const app = express();
 const port = 5001;
 
-app.use(json())
+app.use(json());
+
 app.get("/", (req, res) => {
   res.send("server is runnin");
 });
 
+app.get("/users", getAllUsers);
+app.post('/registrazione', registrazione);
+app.post('/login', login);
 
-
-app.get("/users", async (req, res) => {
-  try {
-    const users = await db.manyOrNone(`SELECT * FROM users`);
-    if (!users) {
-      res.status(400).json({ message: "utenti non trovati" });
-      return;
-    }
-    
-    res.status(200).json(users);
-  } catch (error) {
-    res.status(500).json({ message: "errore nel server" });
-  }
-});
 
 app.listen(port, () => {
   console.log(`server started on ${port}`);
