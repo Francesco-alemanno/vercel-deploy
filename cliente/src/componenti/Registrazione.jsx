@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import '/css/registrazione.css'
 export function Registrazione() {
   const [data, setData] = useState({
     nome: "",
@@ -62,7 +62,7 @@ export function Registrazione() {
   };
 
   return (
-    <div>
+    <div className="registrazione-box">
       <form onSubmit={handleSubmit} className="form">
         <img src="src/assets/logo.svg" width={240} alt="logo" />
         <h3>Registrati</h3>
