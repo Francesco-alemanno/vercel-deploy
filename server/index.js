@@ -1,6 +1,6 @@
 import express, { json } from 'express'
 
-
+import { db } from './initDb.js';
 const app = express();
 const port = 5001;
 app.use("/", (req, res) => {
