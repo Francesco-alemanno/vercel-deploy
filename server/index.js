@@ -5,7 +5,7 @@ const app = express();
 const port = 5001;
 
 app.use(json());
-
+// tolto cors per prova
 app.get("/", (req, res) => {
   res.send("server is runnin");
 });
