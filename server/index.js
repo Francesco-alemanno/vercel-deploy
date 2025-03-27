@@ -3,7 +3,9 @@ import express, { json } from 'express'
 
 const app = express();
 const port = 5001;
-
+app.use("/", (req, res) => {
+  res.send("server is runnin");
+});
 app.use(json())
 
 
