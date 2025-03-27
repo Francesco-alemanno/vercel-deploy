@@ -3,10 +3,12 @@ import express, { json } from 'express'
 import { db } from './initDb.js';
 const app = express();
 const port = 5001;
-app.use("/", (req, res) => {
+
+app.use(json())
+app.get("/", (req, res) => {
   res.send("server is runnin");
 });
-app.use(json())
+
 
 
 app.get("/users", async (req, res) => {
