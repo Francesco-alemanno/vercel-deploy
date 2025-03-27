@@ -9,7 +9,7 @@ app.use("/", (req, res) => {
 app.use(json())
 
 
-app.use("/users", async (req, res) => {
+app.get("/users", async (req, res) => {
   try {
     const users = await db.manyOrNone(`SELECT * FROM users`);
     if (!users) {
