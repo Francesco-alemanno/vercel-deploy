@@ -1,11 +1,13 @@
 import express, { json } from "express";
 import { db } from "./initDb.js";
-
+import cors from 'cors'
 const app = express();
 const port = 5001;
 
 app.use(json());
 app.use(cors());
+
+
 app.get("/", (req, res) => {
   res.send("server is runnin");
 });
