@@ -4,7 +4,7 @@ import cors from 'cors'
 import bcrypt from 'bcrypt'
 const app = express();
 const port = 5001;
-
+const SALT_ROUNDS = parseInt(process.env.SALT_ROUNDS, 10) || 10;
 app.use(json());
 app.use(cors());
 
