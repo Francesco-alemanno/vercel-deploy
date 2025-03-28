@@ -1,0 +1,142 @@
+/* 🌍 Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* 📌 Contenitore principale */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 🔥 FISSATO: Non schiaccia l’input in alto */
+    align-items: center;
+    position: relative;
+}
+
+/* 🔎 Barra di ricerca (NON SPARISCE PIÙ) */
+.search-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px; /* 🔥 FIX: Aggiunto spazio sopra per evitare che sparisca */
+    padding: 10px;
+    position: relative;
+    z-index: 100; /* 🔥 Garantisce visibilità */
+}
+
+/* 🛠 Input */
+input {
+    flex: 1;
+    min-width: 220px;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    outline: none;
+}
+
+input:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+}
+
+/* 🔹 Pulsante */
+button {
+    padding: 12px 15px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #005bbb;
+}
+
+/* 🔹 Contenitore delle schede meteo */
+.weather-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* 🔹 Singola scheda meteo */
+.weather-card {
+    background: linear-gradient(135deg, #87ceeb, #1e90ff);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🌍 RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+        margin-top: 80px; /* 🔥 SU MOBILE, DARE PIÙ SPAZIO */
+    }
+
+    input, button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .weather-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weather-card {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .weather-card {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

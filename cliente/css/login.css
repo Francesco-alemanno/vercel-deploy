@@ -1,96 +1,129 @@
-/* Stile generale */
-body {
-    font-family: "Poppins", sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+
+
+
+/* Contenitore principale */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Form di login */
+.form {
+  background: white;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.form:hover {
+  transform: scale(1.02);
+}
+
+/* Logo */
+.form img {
+  display: block;
+  margin: 0 auto 15px;
+  width: 120px;
+}
+
+/* Titolo */
+.form h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Stile per le label */
+.form label {
+  text-align: left;
+  font-weight: 500;
+  margin: 10px 0 5px;
+  color: #333;
+  font-size: 14px;
+  display: block;
+}
+
+/* Stile per gli input */
+.form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  background-color: white;
+}
+
+/* Pulsante */
+.form button {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.form button:hover {
+  background: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Link di navigazione */
+.form p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.form p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.form p a:hover {
+  text-decoration: underline;
+}
+
+/* Messaggi di errore */
+.form p.error {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+}
+
+/* 🔹 Responsività per dispositivi mobili */
+@media screen and (max-width: 450px) {
+  .form {
+      width: 90%;
+      padding: 30px;
   }
-  
-  /* Contenitore del form */
-  .login-box {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  /* Logo */
-  .login-box img {
-    display: block;
-    margin: 0 auto 20px;
-  }
-  
-  /* Titolo */
-  .login-box h3 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Input */
-  .form label {
-    display: block;
-    text-align: left;
-    font-weight: 500;
-    margin: 10px 0 5px;
-    color: #333;
-  }
-  
-  .form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: 0.3s;
-  }
-  
-  .form input:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-  }
-  
-  /* Pulsante */
+
+  .form input, 
   .form button {
-    width: 100%;
-    background: #007bff;
-    color: white;
-    font-size: 18px;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
+      font-size: 16px;
   }
-  
-  .form button:hover {
-    background: #0056b3;
-  }
-  
-  /* Messaggi */
-  .form p {
-    font-size: 14px;
-    color: red;
-    margin-top: 5px;
-  }
-  
-  /* Link */
-  .form p a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .form p a:hover {
-    text-decoration: underline;
-  }
-  
+}

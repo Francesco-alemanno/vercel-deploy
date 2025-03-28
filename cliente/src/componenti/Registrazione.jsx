@@ -64,7 +64,7 @@ export function Registrazione() {
   return (
     <div className="registrazione-box">
       <form onSubmit={handleSubmit} className="form">
-        <img src="src/assets/logo.svg" width={240} alt="logo" />
+        <img src="/meteoo.png" width={240} alt="logo" />
         <h3>Registrati</h3>
 
         <label>Nome:</label>

@@ -51,9 +51,9 @@ export function Login() {
   };
 
   return (
-    <div>
+    <div className="login-body">
       <form onSubmit={handleSubmit} className="form">
-        <img src="src/assets/logo.svg" width={240} alt="logo" />
+      <img src="/meteoo.png" width={240} alt="logo" />
         <h3>Login</h3>
 
         <label>Email:</label>
